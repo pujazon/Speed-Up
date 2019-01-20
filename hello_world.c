@@ -1,7 +1,13 @@
 #include <stdio.h>
-int main()
+#include <omp.h>
+#include <math.h>
+
+int main(int argc, char **argv)
 {
-   // printf() displays the string inside quotation
-   printf("Hello, World!\n");
-   return 0;
+
+	#pragma omp parallel
+	{	
+		printf("Hello World!");
+	}
+
 }
